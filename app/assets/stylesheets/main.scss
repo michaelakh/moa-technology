@@ -1,0 +1,46 @@
+
+body .container {
+  max-width:1400px;
+  font-family: 'lato', 'arial', 'helvetica', sans-serif;
+}
+
+.center {
+  text-align:center;
+}
+
+span.contact-list {
+  padding-left:4px;
+}
+ul.normal {
+  list-style-type:none;
+  padding:0px 5px;
+}
+ul.normal li {
+  padding:10px;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .text-xs-center {
+    text-align:center;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+  
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+}

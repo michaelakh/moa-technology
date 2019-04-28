@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @title == nil ? 'MOA Technologies, Web Development' : @title %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <% @meta[:description].blank? ? @meta.merge!({:description => "We create stunning websites using Ruby on Rails that solve real world problems."}) : ''%>
+    <%= meta_tag(@meta) %>
+  </head>
+
+  <body>
+    <%= render '/layouts/main/nav' %>
+      <div class='container-fluid'>
+      <% flash.each do |key,msg| %>
+        <div class='alert alert-warning'>
+            <%= msg %>
+        </div>
+      <% end %>
+
+    <%= yield %>
+      </div>
+    <%= render '/layouts/main/footer'%>
+    
+  </body>
+</html>
+

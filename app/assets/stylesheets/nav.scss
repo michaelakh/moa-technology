@@ -1,0 +1,26 @@
+  nav.navbar a.nav-link, .navbar-brand.moa-t, .navbar-brand.moa-t span, nav.navbar li.nav-item {
+    transition:0.5s;
+  } 
+  .navbar-brand.moa-t {
+    color:#CCC;
+  }
+  .navbar-brand.moa-t:hover {
+    color:#FFF;
+    text-shadow: 2px 2px 4px #CCC;
+  }
+  
+  .navbar-brand.moa-t:hover span {
+    color:red;
+  }
+  nav.navbar li.nav-item:hover{
+    background-color:#777;
+    border-radius:1em;
+  }
+  nav.navbar li.nav-item:hover a.nav-link{
+    color:#FFF;
+  }
+
+  footer nav.navbar li.nav-item a.nav-link{
+    color:#99ccff;
+    font-weight:bold;
+  }
