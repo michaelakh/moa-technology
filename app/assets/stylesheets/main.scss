@@ -38,11 +38,20 @@ a.testimonial:hover {
   transition:1s;
 }
 
+section.intro-section {
+  background-image:image-url('pexels-photo-374631');
+  background-color:#333;
+  background-size: auto 120%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
   .text-xs-center {
     text-align:center;
   }
+  
 }
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
@@ -51,15 +60,21 @@ a.testimonial:hover {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-
+  section.intro-section {
+    background-size: 120% 140%;
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
-
+  section.intro-section {
+    background-size: 100% 140%;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
-
+  section.intro-section {
+    background-size: 100% 120%;
+  }
 }

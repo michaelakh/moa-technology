@@ -27,6 +27,7 @@ $( document ).on('turbolinks:load', function() {
           } else {
             $target.attr('tabindex','-1'); 
           };
+          window.location.hash = target[0].id;
         });
       }
     }
