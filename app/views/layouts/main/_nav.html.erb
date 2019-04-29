@@ -8,10 +8,9 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          
-          <a class="nav-link" href="#">
+          <%= link_to "#about", class:'nav-link' do %>
             <i><%= icon "note", {aria:'About Me'}%></i> About Me
-          </a>
+          <% end %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">
@@ -25,14 +24,14 @@
         </li>
         <li class="nav-item">
           
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#testimonials">
             <i><%= icon "megaphone", {aria:'Testimonials'}%></i> Testimonials
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <%= link_to "#about", class:'nav-link' do %>
             <i><%= icon "comment", {aria:'Contact'}%></i> Contact
-          </a>
+          <% end %>
         </li>
       </ul>
     </div>

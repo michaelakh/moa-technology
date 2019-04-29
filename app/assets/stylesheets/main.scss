@@ -1,4 +1,7 @@
-
+html {
+  // scroll-behavior is not cross browser compatible yet
+  // scroll-behavior: smooth;
+}
 body .container {
   max-width:1400px;
   font-family: 'lato', 'arial', 'helvetica', sans-serif;
@@ -17,6 +20,22 @@ ul.normal {
 }
 ul.normal li {
   padding:10px;
+}
+
+ol li.testimonial {
+  background-color:#333;
+}
+
+a.testimonial, a.testimonial:focus {
+  color:#333;
+}
+
+a.testimonial:hover {
+  color:#000;
+}
+
+.animation-element {
+  transition:1s;
 }
 
 // Extra small devices (portrait phones, less than 576px)

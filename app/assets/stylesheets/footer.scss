@@ -1,13 +1,47 @@
-  footer.footer {
-    font-size:1em;
-    line-height:1;
-    border:solid 1px black;
-    background-color:#333;
-    color:#FFF;
-    padding:30px 0px;
-  }
-  
-  footer div.container.footer {
-    
-  }
+footer.footer {
+  font-size:1em;
+  line-height:1.5;
+  border:solid 1px black;
+  background-color:#333;
+  color:#FFF;
+  padding:30px 0px;
+  box-shadow: 0px -3px 5px #000;
+}
+
+div.testimonial-content {
+  max-width:600px; 
+  margin:0 auto; 
+  padding-bottom:30px;
+  min-height:280px;
+  line-height:2;
+}
+nav.navbar.navbar-dark.bg-dark {
+  background-color:rgba(0,0,0,0.8) !important;
+}
+footer div.container.animation-element {
+  color:rgba(255,255,255,0);
+  margin-top:200px;
+}
+footer div.container.animation-element.in-view {
+  color:rgba(255,255,255,1);
+  margin-top:0px;
+}
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+}
+
+section.container.animation-element {
+  color:rgba(0,0,0,0);
+  transition: 2s;
+}
+
+section.container.animation-element.in-view {
+  color:rgba(0,0,0,1);
+
+}
   
