@@ -1,112 +1,9 @@
 <style>
-  html {
-    height:100%
-  }
-  section.intro-section, section.intro-section div.overlay {
-    height:100vh;
-    height:100%;
-    height:-webkit-fill-available;
-  }
-  
-  section.intro-section div.container.container-pad {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  section.container div.row {
-    min-height:500px;
-  }
-  
-  section.intro-section div.overlay {
-    background-color:rgba(0,0,0,0.5);
-  }
-  
-  section.intro-section div.container div.row {
-    color:#FFF;
-  }
-  
-  .container-pad {
-    padding-top:80px;
-    padding-bottom:80px;
-  }
-  
-  .light a {
-    color:#AAA;
-    transition:1s
-  }
-  
-  .light a:hover {
-    color:#FFF;
-  }
-  
-  #projects h1.fade.animation-element {
-    margin-left:-100px;
-    transition: 2s;
-  }
-  
-  
-  #projects h1.fade.animation-element.in-view {
-    margin-left:0px;
-  }
-  
-  #who-am-i .fade.fade-left.animation-element {
-    margin-left:-200px;
-    transition: 2s;
-  }
-  
-  
-  #who-am-i .fade.fade-left.animation-element.in-view {
-    margin-left:0px;
-  }
-  
-  #who-am-i .fade.fade-right.animation-element {
-    margin-left:200px;
-    transition: 2s;
-  }
-  
-  
-  #who-am-i .fade.fade-right.animation-element.in-view {
-    margin-left:0px;
-  }
-  
-  
-  
-  .fade.animation-element {
-    opacity:0;
-    transition: 2s;
-  }
 
-  .fade.animation-element.in-view {
-    opacity:1;
-  }
-  
-  div.caption {
-    position:relative;
-    padding:10px 10px 40px 10px;
-    height:12.5em;
-    overflow:hidden;
-  }
-  
-  div.caption div.overlay {
-    position:absolute;
-    bottom:0px;
-    width:100%;
-    height:6em;
-    background-image:linear-gradient(rgba(255,255,255,0) 10%, rgba(255,255,255,1) 40%);
-  }
-  
-  div.caption div.overlay a {
-    position:absolute;
-    bottom:15px;
-    right:10px;
-    width:100%;
-  }
   
 </style>
 <div class='main-section'>
-  <section class='intro-section'>
+  <section class='intro-section' id='intro-section'>
     <div class='overlay'>
       <div class='container container-pad'>
         <div class='row'>
@@ -126,7 +23,7 @@
           </div>
         </div>
         <div class='text-center light'>
-          <%= link_to "#projects", class:'nav-link' do %>
+          <%= link_to "#who-am-i", class:'nav-link' do %>
             <i><%= icon "chevron-down", {aria:'Projects',height:'40'}%></i>
           <% end %>
         </div>
@@ -145,10 +42,10 @@
               Hello there! My name is Ozi and I'm a Full Stack Web Developer.
             </p>
             <p>
-              I'm very good with Front-end Web development. I prefer to make websites look professional and easy to use with web-pages that are simple, elegant, and with purpose (for example, to sell services or products). I love clean professional well tested code which I use for both Back-end and Front-end web development
+              I'm very good with Front-end Web development and Back-end Web development. I prefer to make websites look professional and easy to use with web-pages that are simple, elegant, and with purpose (for example, to sell services or products). I love clean professional well tested code which I use for both Back-end and Front-end web development
             </p>
             <p>
-              I started my journey as a self-taught web developer right out of University when I first discovered the biggest CMS in the industry, WordPress.
+              Over the years, i've adopted to many frameworks, technology stacks, and business needs that have helped me evolve and become the web developer I am today.
             </p>
             <p class='text-center'>
               <%= link_to "#about", class:'btn btn-lg btn-primary cookie-accept' do %>
@@ -165,100 +62,139 @@
       </div>
     </div>
   </section>
+  <% if @projects.blank? != true %>
   <section class='projects container-pad' id='projects'>
     <div class='container'>
       <h1 class='fade animation-element'>
         My Latest Work
       </h1>
       <div class='row fade animation-element'>
-        <div class='col-md-3 col-sm-4 col-xs-6'>
-          <div class='text-center'>
-            <%= image_tag('https://via.placeholder.com/400x310', alt:'placeholder', class:'img-fluid') %>
-          </div>
-          <div class='caption'>
-            <p>
-              An E-Commerce Ruby on Rails application. Created with a "Buyer" and "Seller" structure where sellers and list products on the website and buyers can buy products from the website. It's a natural product focused business that sells natural products to natural people.
-            </p>
-            <div class='overlay text-center'>
-              <%= link_to "#about", class:'btn btn-primary nav-link' do %>
-                View Project <i><%= icon "chevron-right", {aria:'Projects',height:'24'}%></i>
-              <% end %>
+        <% @projects.each do |project| %>
+
+          <div class='col-md-3 col-sm-4 col-xs-6'>
+            <h1>
+              <%= project.title.capitalize_all %>
+            </h1>
+            <div class='text-center '>
+              <%= image_tag(project.image.thumb.url, alt:'Project Image', class:'img-fluid') %>
+            </div>
+            <div class='caption'>
+                <%= project.summary.html_safe %>
+              <div class='overlay text-center'>
+                <%= link_to project, class:'btn btn-primary nav-link' do %>
+                  View Project <i><%= icon "chevron-right", {aria:'Projects',height:'24'}%></i>
+                <% end %>
+              </div>
+            </div>
+            <div>
             </div>
           </div>
-        </div>
-        <div class='col-md-3 col-sm-4 col-xs-6'>
-          <div class='text-center'>
-            <%= image_tag('https://via.placeholder.com/400x310', alt:'placeholder', class:'img-fluid') %>
-          </div>
-          <div class='caption'>
-            <p>
-              A Ruby on Rails website that integrates with the <%= link_to 'Kiwi Flights', 'https://www.kiwi.com/us/', target:'_blank' %> Api to get and display the flight information for airlines that accept pets onboard.
-            </p>
-            <div class='overlay text-center'>
-              <%= link_to "#about", class:'btn btn-primary nav-link' do %>
-                View Project <i><%= icon "chevron-right", {aria:'Projects',height:'24'}%></i>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class='col-md-3 col-sm-4 col-xs-6'>
-          <div class='text-center'>
-            <%= image_tag('https://via.placeholder.com/400x310', alt:'placeholder', class:'img-fluid') %>
-          </div>
-          <div class='caption'>
-            <p>
-              A Ruby on Rails application that Shortens Urls and Tracks link clicks. This is the core functionality which is used for affiliate marketing, while you track the link, you can create a cookie that can be called back to when a user takes an action on your website (e.g. purchases an item or service).
-            </p>
-            <div class='overlay text-center'>
-              <%= link_to "#about", class:'btn btn-primary nav-link' do %>
-                View Project <i><%= icon "chevron-right", {aria:'Projects',height:'24'}%></i>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class='col-md-3 col-sm-4 col-xs-6'>
-          <div class='text-center'>
-            <%= image_tag('https://via.placeholder.com/400x310', alt:'placeholder', class:'img-fluid') %>
-          </div>
-          <div class='caption'>
-            <p>
-              A PHP Application built with Drupal CMS. Students can sign up, sign in and see video courses depending on which curriculum, year, and teachers they have. 
-            </p>
-            <div class='overlay text-center'>
-              <%= link_to "#about", class:'btn btn-primary nav-link' do %>
-                View Project <i><%= icon "chevron-right", {aria:'Projects',height:'24'}%></i>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class='col-md-3 col-sm-4 col-xs-6'>
-          <div class='text-center'>
-            <%= image_tag('https://via.placeholder.com/400x310', alt:'placeholder', class:'img-fluid') %>
-          </div>
-          <div class='caption'>
-            <p>
-              A basic Ruby on Rails website that displays business information about a digital marketing agency based in london. This includes their services, business operations and general business information
-            </p>
-            <div class='overlay text-center'>
-              <%= link_to "#about", class:'btn btn-primary nav-link' do %>
-                View Project <i><%= icon "chevron-right", {aria:'Projects',height:'24'}%></i>
-              <% end %>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </section>
-  <section class='technology-stack container-pad' id='technology-stack'>
+  <% end %>
+  <section class='technology-stack container-pad fade animation-element' id='technology-stack'>
     <div class='container text-center'>
       <h1>
         Technology Stack
       </h1>
-      <p>
-        Content
-      </p>
+      <h2>
+        Front-end
+      </h2>
+      <div class="d-flex justify-content-between">
+        <div class="p-2 btn btn-secondary tech">
+          HTML 5
+        </div>
+        <div class="p-2 btn btn-secondary tech">
+          CSS
+        </div>
+        <div class="p-2 btn btn-secondary tech">
+          Javascript (Jquery)
+        </div>
+      </div>
+      <h3>
+        Frameworks/Libraries
+      </h3>
+      <div class="d-flex justify-content-between">
+        <div class="p-2 btn btn-primary tech">
+          Bootstrap 3/4
+        </div>
+        <div class="p-2 btn btn-primary tech">
+          SASS
+        </div>
+        <div class="p-2 btn btn-primary tech">
+          React
+        </div>
+        <div class="p-2 btn btn-primary tech">
+          Redux
+        </div>
+      </div>
+      <h2>
+        Back-end
+      </h2>
+      <div class="d-flex justify-content-between ">
+        <div class="p-2 btn btn-success tech">
+          Ruby
+        </div>
+        <div class="p-2 btn btn-success tech">
+          PHP
+        </div>
+      </div>
+      <h3>
+        Data stores/Databases
+      </h3>
+      <div class="d-flex justify-content-between ">
+        <div class="p-2 btn btn-warning tech">
+          MySql
+        </div>
+        <div class="p-2 btn btn-warning tech">
+          Postgresql
+        </div>
+        <div class="p-2 btn btn-warning tech">
+          MongoDB
+        </div>
+        <div class="p-2 btn btn-warning tech">
+          Redis
+        </div>
+      </div>
+      <h3>
+        Frameworks/Libraries/CMS
+      </h3>
+      <div class="d-flex justify-content-between">
+        <div class="p-2 btn btn-danger tech">
+          Ruby on Rails
+        </div>
+        <div class="p-2 btn btn-danger tech">
+          Wordpress
+        </div>
+        <div class="p-2 btn btn-danger tech">
+          Drupal
+        </div>
+        <div class="p-2 btn btn-danger tech">
+          Shopify
+        </div>
+      </div>
+      <h3>
+        Deployment/Version Control
+      </h3>
+      <div class="d-flex justify-content-between">
+        <div class="p-2 btn btn-dark tech">
+          Git/GitFlow
+        </div>
+        <div class="p-2 btn btn-dark tech">
+          Heroku
+        </div>
+        <div class="p-2 btn btn-dark tech">
+          Agile
+        </div>
+        <div class="p-2 btn btn-dark tech">
+          Scrum
+        </div>
+      </div>
     </div>
   </section>
+  <%= render 'layouts/main/testimonials' %>
 </div>
 
 <script>

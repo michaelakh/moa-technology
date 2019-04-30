@@ -15,3 +15,44 @@
  */
 
 @import "bootstrap";
+
+//fonts
+@font-face {
+    font-family: "kollektif";
+    src: font-url("Kollektif.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "belinda";
+    src: font-url("belinda.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "allura-regular";
+    src: font-url("Allura-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "carterone";
+    src: font-url("CarterOne.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "baloo";
+    src: font-url("Baloo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "clearsans regular";
+    src: font-url("ClearSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "adventpro regular";
+    src: font-url("adventpro-regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Archivo regular";
+    src: font-url("Archivo-Regular.ttf") format("truetype");
+}

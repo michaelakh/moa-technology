@@ -1,0 +1,98 @@
+section.intro-section {
+  background-image:image-url('pexels-photo-374631');
+  background-color:#333;
+  background-size: auto 145%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+section.intro-section, section.intro-section div.overlay {
+  height:100vh;
+  height:100%;
+  height:-webkit-fill-available;
+}
+
+section.intro-section div.container.container-pad {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section.container div.row {
+  min-height:500px;
+}
+
+section.intro-section div.overlay {
+  background-color:rgba(0,0,0,0.5);
+}
+
+section.intro-section div.container div.row {
+  color:#FFF;
+}
+
+ #intro-section .container i {
+    display:inline-block;
+    height:40px;
+    width:40px;
+    border-radius:3em;
+    transition:1s;
+  }
+  
+  #intro-section .container i:hover {
+    background-color:#FFF;
+    color:#000;
+  }
+  
+  #projects h1.fade.animation-element {
+    margin-left:-100px;
+    transition: 2s;
+  }
+  
+  
+  #projects h1.fade.animation-element.in-view {
+    margin-left:0px;
+  }
+  
+  #who-am-i .fade.fade-left.animation-element {
+    margin-left:-200px;
+    transition: 2s;
+  }
+  
+  
+  #who-am-i .fade.fade-left.animation-element.in-view {
+    margin-left:0px;
+  }
+  
+  #who-am-i .fade.fade-right.animation-element {
+    margin-left:200px;
+    transition: 2s;
+  }
+  
+  
+  #who-am-i .fade.fade-right.animation-element.in-view {
+    margin-left:0px;
+  }
+  
+  #technology-stack .tech {
+    width:100%;
+    border:solid 1px white;
+  }
+  
+  #technology-stack {
+    max-width: 1000px;
+    margin:0 auto;
+  }
+  
+  #technology-stack .container .d-flex.justify-content-between .p-2.btn {
+    font-weight:bold;
+  }
+  
+  .fade.animation-element {
+    opacity:0;
+    transition: 3s;
+  }
+
+  .fade.animation-element.in-view {
+    opacity:1;
+  }

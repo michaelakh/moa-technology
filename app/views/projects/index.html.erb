@@ -1,0 +1,45 @@
+<style>
+  .project-thumb {
+    height:310px;
+    width:400px;
+  }
+</style>
+<div class='container'>
+  <h1 class='fade animation-element'>
+    Projects
+  </h1>
+  <section class='projects container-pad' id='projects'>
+    <div class='container'>
+      <div class='row fade animation-element'>
+        <% @projects.each do |project| %>
+
+          <div class='col-md-3 col-sm-4 col-xs-6'>
+            <h1>
+              <%= project.title.capitalize_all %>
+            </h1>
+            <div class='text-center '>
+              <%= image_tag(project.image.thumb.url, alt:'Project Image', class:'img-fluid') %>
+            </div>
+            <div class='caption'>
+                <%= project.summary.html_safe %>
+              <div class='overlay text-center'>
+                <%= link_to project, class:'btn btn-primary nav-link' do %>
+                  View Project <i><%= icon "chevron-right", {aria:'Projects',height:'24'}%></i>
+                <% end %>
+              </div>
+            </div>
+            <div>
+              <%= link_to 'Edit', edit_project_path(project) %>
+              <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <%= link_to 'New Project', new_project_path %>
+  
+</div>

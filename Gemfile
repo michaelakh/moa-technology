@@ -5,6 +5,20 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+# Use will_paginate for pagination
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
+# Use Carrier wave for image processing
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
+gem 'rmagick'
+# Use google-fog to store images for production
+gem "fog-google"
+gem "google-api-client", "> 0.8.5", "< 0.9"
+gem "mime-types"
+# Simple authentication for addings projects
+gem 'devise'
 # Use Bootsrap 4 library for Ui/Ux design
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'

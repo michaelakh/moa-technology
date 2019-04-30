@@ -1,9 +1,10 @@
 module PageHelper
   
   def icon(name, options = {})
-    options[:height] ||= 24
+    options[:height] ||= "1em"
+    options[:width] ||= options[:height]
     options[:aria] ||= name
-    octicon name, :height => options[:height],  :class => options[:class], :"aria-label" => options[:aria]
+    octicon name, :height => options[:height], :width => options[:width],  :class => options[:class], :"aria-label" => options[:aria]
   end
   
   def meta_tag(meta_tag)
@@ -20,6 +21,10 @@ module PageHelper
 
   def captalize_all(string)
     string.split.map(&:capitalize).join(' ')
+  end
+  
+  def web_address(string)
+    request.base_url + "/#{string}"
   end
   
 end

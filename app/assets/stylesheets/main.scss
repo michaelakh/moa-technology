@@ -1,10 +1,12 @@
 html {
+  height:100%
   // scroll-behavior is not cross browser compatible yet
   // scroll-behavior: smooth;
 }
+
 body .container {
   max-width:1400px;
-  font-family: 'lato', 'arial', 'helvetica', sans-serif;
+  font-family: 'kollektif',lato,verdana, arial, helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .center {
@@ -38,12 +40,41 @@ a.testimonial:hover {
   transition:1s;
 }
 
-section.intro-section {
-  background-image:image-url('pexels-photo-374631');
-  background-color:#333;
-  background-size: auto 120%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.container-pad {
+  padding-top:80px;
+  padding-bottom:80px;
+}
+
+.light a {
+  color:#AAA;
+  transition:1s;
+}
+
+.light a:hover {
+  color:#FFF;
+}
+ 
+  
+div.caption {
+  position:relative;
+  padding:10px 10px 40px 10px;
+  height:12.5em;
+  overflow:hidden;
+}
+
+div.caption div.overlay {
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  height:6em;
+  background-image:linear-gradient(rgba(255,255,255,0) 10%, rgba(255,255,255,1) 40%);
+}
+
+div.caption div.overlay a {
+  position:absolute;
+  bottom:15px;
+  right:10px;
+  width:100%;
 }
 
 // Extra small devices (portrait phones, less than 576px)
@@ -60,21 +91,15 @@ section.intro-section {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-  section.intro-section {
-    background-size: 120% 140%;
-  }
+
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
-  section.intro-section {
-    background-size: 100% 140%;
-  }
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
-  section.intro-section {
-    background-size: 100% 120%;
-  }
+
 }

@@ -8,28 +8,27 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <%= link_to "#about", class:'nav-link' do %>
+          <%= link_to web_address('#about'), class:'nav-link' do %>
             <i><%= icon "note", {aria:'About Me'}%></i> About Me
           <% end %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <%= link_to web_address('#projects'), class:'nav-link' do %>
             <i><%= icon "file-symlink-directory", {aria:'Projects'}%></i> Projects
-          </a>
+          <% end %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <%= link_to web_address('#connect-with-me'), class:'nav-link' do %>
             <i><%= icon "organization", {aria:'Connect With Me'}%></i> Connect With Me
-          </a>
+          <% end %>
         </li>
         <li class="nav-item">
-          
-          <a class="nav-link" href="#testimonials">
+          <%= link_to web_address('#testimonials'), class:'nav-link' do %>
             <i><%= icon "megaphone", {aria:'Testimonials'}%></i> Testimonials
-          </a>
+          <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to "#about", class:'nav-link' do %>
+          <%= link_to web_address('#about'), class:'nav-link' do %>
             <i><%= icon "comment", {aria:'Contact'}%></i> Contact
           <% end %>
         </li>
