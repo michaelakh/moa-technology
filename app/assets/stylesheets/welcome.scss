@@ -87,6 +87,10 @@ section.intro-section div.container div.row {
   #technology-stack .container .d-flex.justify-content-between .p-2.btn {
     font-weight:bold;
   }
+
+  #technology-stack .btn-light.tech {
+    border:solid 1px #666;
+  }
   
   .fade.animation-element {
     opacity:0;

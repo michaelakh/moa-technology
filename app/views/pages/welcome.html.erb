@@ -1,6 +1,8 @@
 <style>
 
   
+  
+  
 </style>
 <div class='main-section'>
   <section class='intro-section' id='intro-section'>
@@ -95,101 +97,218 @@
   </section>
   <% end %>
   <section class='technology-stack container-pad fade animation-element' id='technology-stack'>
-    <div class='container text-center'>
+    <div class='container'>
       <h1>
         Technology Stack
       </h1>
-      <h2>
-        Front-end
-      </h2>
-      <div class="d-flex justify-content-between">
-        <div class="p-2 btn btn-secondary tech">
-          HTML 5
+      <div class='box-wrapper'>
+        <h2>
+          Front-end
+        </h2>
+        <hr>
+        <h3>
+          Languages
+        </h3>
+        <div class="d-flex justify-content-between text-center">
+          <div class="p-2 btn btn-light tech">
+            <div class='text-center'>
+              <%= image_tag('html5', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              HTML 5
+            </div>
+
+          </div>
+          <div class="p-2 btn btn-light tech">
+            <div class='text-center'>
+              <%= image_tag('css3', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              CSS
+            </div>
+          </div>
+          <div class="p-2 btn btn-light tech">
+            <div class='text-center'>
+              <%= image_tag('jquery', class:'img-fluid tech-icon d-none d-sm-inline') %>
+              <%= image_tag('javascript', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              Javascript (Jquery)
+            </div>
+          </div>
         </div>
-        <div class="p-2 btn btn-secondary tech">
-          CSS
-        </div>
-        <div class="p-2 btn btn-secondary tech">
-          Javascript (Jquery)
-        </div>
-      </div>
-      <h3>
-        Frameworks/Libraries
-      </h3>
-      <div class="d-flex justify-content-between">
-        <div class="p-2 btn btn-primary tech">
-          Bootstrap 3/4
-        </div>
-        <div class="p-2 btn btn-primary tech">
-          SASS
-        </div>
-        <div class="p-2 btn btn-primary tech">
-          React
-        </div>
-        <div class="p-2 btn btn-primary tech">
-          Redux
-        </div>
-      </div>
-      <h2>
-        Back-end
-      </h2>
-      <div class="d-flex justify-content-between ">
-        <div class="p-2 btn btn-success tech">
-          Ruby
-        </div>
-        <div class="p-2 btn btn-success tech">
-          PHP
-        </div>
-      </div>
-      <h3>
-        Data stores/Databases
-      </h3>
-      <div class="d-flex justify-content-between ">
-        <div class="p-2 btn btn-warning tech">
-          MySql
-        </div>
-        <div class="p-2 btn btn-warning tech">
-          Postgresql
-        </div>
-        <div class="p-2 btn btn-warning tech">
-          MongoDB
-        </div>
-        <div class="p-2 btn btn-warning tech">
-          Redis
-        </div>
-      </div>
-      <h3>
-        Frameworks/Libraries/CMS
-      </h3>
-      <div class="d-flex justify-content-between">
-        <div class="p-2 btn btn-danger tech">
-          Ruby on Rails
-        </div>
-        <div class="p-2 btn btn-danger tech">
-          Wordpress
-        </div>
-        <div class="p-2 btn btn-danger tech">
-          Drupal
-        </div>
-        <div class="p-2 btn btn-danger tech">
-          Shopify
+        <br>
+        <h3>
+          Frameworks/Libraries
+        </h3>
+        <div class="d-flex justify-content-between text-center">
+          <div class="p-2 btn btn-light tech">
+            <div class='text-center'>
+              <%= image_tag('bootstrap', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              Bootstrap 3/4
+            </div>
+          </div>
+          <div class="p-2 btn btn-light tech">
+            <div class='text-center'>
+              <%= image_tag('sass', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              SASS
+            </div>
+          </div>
+          <div class="p-2 btn btn-light tech">
+            <div class='text-center'>
+              <%= image_tag('react', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              React/Redux
+            </div>
+          </div>
         </div>
       </div>
-      <h3>
-        Deployment/Version Control
-      </h3>
-      <div class="d-flex justify-content-between">
-        <div class="p-2 btn btn-dark tech">
-          Git/GitFlow
+      <div class='box-wrapper'>
+        <h2>
+          Back-end
+        </h2>
+        <h3>
+          Languages
+        </h3>
+        <div class="d-flex justify-content-between text-center">
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('ruby', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              Ruby
+            </div>
+          </div>
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('php', class:'img-fluid tech-icon', style:'width:5em;') %>
+            </div>
+            <div class='text-center'>
+              PHP
+            </div>
+          </div>
         </div>
-        <div class="p-2 btn btn-dark tech">
-          Heroku
+        <br>
+        <h3>
+          Data stores/Databases
+        </h3>
+        <div class="d-flex justify-content-between text-center">
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('mysql', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              MySql
+            </div>
+          </div>
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('postgresql', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              Postgresql
+            </div>
+          </div>
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('mongodb', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              MongoDB
+            </div>
+          </div>
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('redis', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              Redis
+            </div>
+          </div>
         </div>
-        <div class="p-2 btn btn-dark tech">
-          Agile
+        <br>
+        <h3>
+          Frameworks/Libraries/CMS
+        </h3>
+        <div class="d-flex justify-content-between text-center">
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('rails', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              Ruby on Rails
+            </div>
+          </div>
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('wordpress', class:'img-fluid tech-icon w-circle-icon') %>
+            </div>
+            <div class='text-center'>
+              Wordpress
+            </div>
+          </div>
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('drupal', class:'img-fluid tech-icon', style:'width:3.3em;') %>
+            </div>
+            <div class='text-center'>
+              Drupal
+            </div>
+          </div>
+          <div class="p-2 btn btn-info tech">
+            <div class='text-center'>
+              <%= image_tag('shopify', class:'img-fluid tech-icon') %>
+            </div>
+            <div class='text-center'>
+              Shopify
+            </div>
+          </div>
         </div>
-        <div class="p-2 btn btn-dark tech">
-          Scrum
+      </div>
+      <div class='box-wrapper'>
+        <h3>
+          Deployment/Version Control
+        </h3>
+        <hr>
+        <div class="d-flex justify-content-between text-center">
+          <div class="p-2 btn btn-success tech">
+            <div class='text-center'>
+              <%= icon "mark-github", {height:'4em'} %>
+
+            </div>
+            <div class='text-center'>
+              Git/GitFlow
+            </div>
+          </div>
+          <div class="p-2 btn btn-success tech">
+            <div class='text-center'>
+              <%= image_tag('heroku2', class:'img-fluid tech-icon ') %>
+            </div>
+            <div class='text-center'>
+              Heroku
+            </div>
+          </div>
+          <div class="p-2 btn btn-success tech">
+            <div class='text-center'>
+              <%= image_tag('agile', class:'img-fluid tech-icon w-circle-icon') %>
+            </div>
+            <div class='text-center'>
+              Agile
+            </div>
+          </div>
+          <div class="p-2 btn btn-success tech">
+            <div class='text-center'>
+              <%= image_tag('rspec', class:'img-fluid tech-icon ') %>
+            </div>
+            <div class='text-center'>
+              Rspec
+            </div>
+          </div>
         </div>
       </div>
     </div>
