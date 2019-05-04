@@ -1,7 +1,65 @@
 <style>
 
+  hr.f-e {
+    margin-top:0px;
+    border-top: solid 3px #004085;
+  }
   
+  hr.b-e {
+    margin-top:0px;
+    border-top: solid 3px #dc3545;
+  }
   
+  hr.v-c {
+    margin-top:0px;
+    border-top: solid 3px #28a745;
+  }
+  
+  hr.w-r {
+    margin-top:0px;
+    border-top:solid 1px #FFF;
+  }
+  
+  .p-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .b-box {
+    max-height:200px;
+    background-color:rgba(0,0,0,0.5);
+    border-radius: 1em;
+    color:#fff;
+    line-height:2;
+    font-size:1.05em;
+  }
+  
+  #projects h1 {
+    font-size:2em;
+  }
+  
+  .p-relative {
+    position:relative;
+  }
+  
+  .p-relative .overlay {
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    transition:0.5s;
+    opacity:0;
+  }
+  
+  .p-relative .overlay:hover {
+    opacity:1;
+  }
+  
+  .p-relative .overlay .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
   
 </style>
 <div class='main-section'>
@@ -9,19 +67,26 @@
     <div class='overlay'>
       <div class='container container-pad'>
         <div class='row'>
-          <div class='col-sm-6 col-xs-12'>
+          <div class='col-sm-6 col-xs-12 p-box'>
             <h1>
-              PEOPLE WORK BETTER TOGETHER
+              MOA | <span style='color:#dc3545;'>TECHNOLOGIES</span>
             </h1>
+            <hr class='w-r'>
+            <h2>
+              PEOPLE WORK BETTER TOGETHER
+            </h2>
             <p> 
               The power of one, if fearless and focused, is formidable, but the power of many working together is better.
               -Gloria Macapagal Arroyo
             </p>
           </div>
-          <div class='col-6 d-none d-sm-flex'>
+          <div class='col-6 d-none d-sm-block b-box p-box text-center'>
             <p> 
-              Want to work with me? I'm always looking for new projects or a coding buddy. Don't be shy, get in touch!
+              Want to work with me? I'm always looking for new projects or a coding buddy. Don't be shy.
             </p>
+            <div class=''>
+              <%= link_to 'Get in touch', '#contact', class:'btn btn-primary cookie-accept'%>
+            </div>
           </div>
         </div>
         <div class='text-center light'>
@@ -77,8 +142,15 @@
             <h1>
               <%= project.title.capitalize_all %>
             </h1>
-            <div class='text-center '>
+            <div class='text-center p-relative'>
+              <%= link_to project do %>
+              <div class='overlay' style='position:absolute;top:0px;left:0px;height:100%; width:100%;'> 
+                <div class='center'>
+                  <i><%=icon 'eye', {height:'4em'} %></i>
+                </div>
+              </div>
               <%= image_tag(project.image.thumb.url, alt:'Project Image', class:'img-fluid') %>
+              <% end %>
             </div>
             <div class='caption'>
                 <%= project.summary.html_safe %>
@@ -105,7 +177,7 @@
         <h2>
           Front-end
         </h2>
-        <hr>
+        <hr class='f-e'>
         <h3>
           Languages
         </h3>
@@ -172,11 +244,12 @@
         <h2>
           Back-end
         </h2>
+        <hr class='b-e'>
         <h3>
           Languages
         </h3>
         <div class="d-flex justify-content-between text-center">
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('ruby', class:'img-fluid tech-icon') %>
             </div>
@@ -184,7 +257,7 @@
               Ruby
             </div>
           </div>
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('php', class:'img-fluid tech-icon', style:'width:5em;') %>
             </div>
@@ -198,7 +271,7 @@
           Data stores/Databases
         </h3>
         <div class="d-flex justify-content-between text-center">
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('mysql', class:'img-fluid tech-icon') %>
             </div>
@@ -206,7 +279,7 @@
               MySql
             </div>
           </div>
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('postgresql', class:'img-fluid tech-icon') %>
             </div>
@@ -214,7 +287,7 @@
               Postgresql
             </div>
           </div>
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('mongodb', class:'img-fluid tech-icon') %>
             </div>
@@ -222,7 +295,7 @@
               MongoDB
             </div>
           </div>
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('redis', class:'img-fluid tech-icon') %>
             </div>
@@ -236,7 +309,7 @@
           Frameworks/Libraries/CMS
         </h3>
         <div class="d-flex justify-content-between text-center">
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('rails', class:'img-fluid tech-icon') %>
             </div>
@@ -244,7 +317,7 @@
               Ruby on Rails
             </div>
           </div>
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('wordpress', class:'img-fluid tech-icon w-circle-icon') %>
             </div>
@@ -252,7 +325,7 @@
               Wordpress
             </div>
           </div>
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('drupal', class:'img-fluid tech-icon', style:'width:3.3em;') %>
             </div>
@@ -260,7 +333,7 @@
               Drupal
             </div>
           </div>
-          <div class="p-2 btn btn-info tech">
+          <div class="p-2 btn btn-danger tech">
             <div class='text-center'>
               <%= image_tag('shopify', class:'img-fluid tech-icon') %>
             </div>
@@ -274,7 +347,7 @@
         <h3>
           Deployment/Version Control
         </h3>
-        <hr>
+        <hr class='v-c'>
         <div class="d-flex justify-content-between text-center">
           <div class="p-2 btn btn-success tech">
             <div class='text-center'>

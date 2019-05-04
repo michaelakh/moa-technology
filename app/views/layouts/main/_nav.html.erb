@@ -28,8 +28,13 @@
           <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to web_address('#about'), class:'nav-link' do %>
+          <%= link_to web_address('#contact'), class:'nav-link' do %>
             <i><%= icon "comment", {aria:'Contact'}%></i> Contact
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to cv_path, class:'nav-link' do %>
+            <i><%= icon "file", {aria:'Contact'}%></i> CV
           <% end %>
         </li>
       </ul>
