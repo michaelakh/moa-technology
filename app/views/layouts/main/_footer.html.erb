@@ -3,13 +3,16 @@
     <div class='row'>
       <div class='col-md-8 col-sm-7 col-xs-12' id='about'>
         <h1>
-          About Ozi
+          About Michael
         </h1>
         <p>
-          Hello there! My name is Ozi and I'm a Full Stack Web Developer.
+          Hello there! My name is Michael and I'm a Full Stack Web Developer.
         </p>
         <p>
           I'm very good with Front-end Web development and Back-end Web development. I prefer to make websites look professional and easy to use with web-pages that are simple, elegant, and with purpose (for example, to sell services or products). I love clean professional well tested code which I use for both Back-end and Front-end web development
+        </p>
+        <p>
+          Over the years, i've adopted to many frameworks, technology stacks, and business needs that have helped me evolve and become the web developer I am today.
         </p>
         <p>
           I started my journey as a self-taught web developer right out of University when I first discovered the biggest CMS in the industry, WordPress.
@@ -92,25 +95,17 @@
               <%= link_to 'Privacy Policy', privacy_path, class:'nav-link'%>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                 Projects
-              </a>
+              <%= link_to 'Projects', web_address('#projects'), class:'nav-link' %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                 Connect With Me
-              </a>
+              <%= link_to 'Testimonials', web_address('#testimonials'), class:'nav-link' %>
             </li>
             <li class="nav-item">
-
-              <a class="nav-link" href="#">
-                 Testimonials
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                 Contact
-              </a>
+              <li class="nav-item">
+                <%= link_to cv_path, class:'nav-link' do %>
+                  <i><%= icon "file", {aria:'Contact'}%></i> CV
+                <% end %>
+              </li>
             </li>
           </ul>
         </div>

@@ -19,6 +19,28 @@ section.intro-section div.container.container-pad {
   transform: translate(-50%, -50%);
 }
 
+// For small devises, style the top of the page
+@media (max-width: 576px) { 
+  section.intro-section div.container.container-pad {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+  
+  section.intro-section, section.intro-section div.overlay {
+    height:auto;
+  }
+  
+  section.intro-section {
+  background-image:image-url('pexels-photo-374631');
+  background-color:#333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+}
+
 section.container div.row {
   min-height:500px;
 }
@@ -33,11 +55,13 @@ section.intro-section div.container div.row {
 
  #intro-section .container i {
     display:inline-block;
-    height:40px;
-    width:40px;
+    height:4em;
+    width:4em;
     border-radius:3em;
     transition:1s;
   }
+
+  
   
   #intro-section .container i:hover {
     background-color:#FFF;
