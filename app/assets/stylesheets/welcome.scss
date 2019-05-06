@@ -68,15 +68,10 @@ section.intro-section div.container div.row {
     color:#000;
   }
   
-  #projects h1.fade.animation-element {
-    margin-left:-100px;
-    transition: 2s;
-  }
   
   
-  #projects h1.fade.animation-element.in-view {
-    margin-left:0px;
-  }
+  
+  
   
   #who-am-i .fade.fade-left.animation-element {
     margin-left:-200px;
@@ -124,3 +119,40 @@ section.intro-section div.container div.row {
   .fade.animation-element.in-view {
     opacity:1;
   }
+
+
+  hr.f-e {
+    margin-top:0px;
+    border-top: solid 3px #004085;
+  }
+  
+  hr.b-e {
+    margin-top:0px;
+    border-top: solid 3px #dc3545;
+  }
+  
+  hr.v-c {
+    margin-top:0px;
+    border-top: solid 3px #28a745;
+  }
+  
+  hr.w-r {
+    margin-top:0px;
+    border-top:solid 1px #FFF;
+  }
+  
+  .p-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .b-box {
+    max-height:200px;
+    background-color:rgba(0,0,0,0.5);
+    border-radius: 1em;
+    color:#fff;
+    line-height:2;
+    font-size:1.05em;
+  }
+  
+ 

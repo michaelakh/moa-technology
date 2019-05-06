@@ -1,3 +1,60 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#projects h1.fade.animation-element {
+  margin-left:-100px;
+  transition: 2s;
+}
+
+#projects h1.fade.animation-element.in-view {
+  margin-left:0px;
+}
+
+#projects h1 {
+  font-size:2em;
+}
+
+.p-relative {
+  position:relative;
+}
+
+.p-relative .overlay {
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  transition:0.5s;
+  opacity:0;
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+}
+
+.p-relative .overlay:hover {
+  opacity:1;
+}
+
+.p-relative .overlay .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.container pre {
+  white-space: pre-wrap;
+  font-family:inherit;
+  font-size:1.1em;
+}
+
+#project.project {
+
+}
+.box-fluid {
+  width:100%;
+  border:solid 1px white;
+}
+#projects .d-flex.justify-content-between.text-center {
+  padding-top:10px;
+}

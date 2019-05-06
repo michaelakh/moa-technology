@@ -1,0 +1,31 @@
+<% projects.each do |project| %>
+  <div class='col-md-3 col-sm-4 col-xs-6'>
+    <h1>
+      <%= project.title.capitalize_all %>
+    </h1>
+    <div class='text-center p-relative'> 
+      <%= link_to project do %>
+      <div class='overlay' style=''> 
+        <div class='center'>
+          <i><%=icon 'eye', {height:'4em'} %></i>
+        </div>
+      </div>
+      <%= image_tag(project.image.thumb.url, alt:'Project Image', class:'img-fluid') %>
+      <% end %>
+    </div>
+    <div class='caption'>
+        <%= project.summary.html_safe %>
+      <div class='overlay text-center'>
+        <%= link_to project, class:'btn btn-primary nav-link' do %>
+          View Project <i><%= icon "chevron-right", {aria:'Projects',height:'24'}%></i>
+        <% end %>
+      </div>
+    </div>
+    <% if user_signed_in? %>
+    <div>
+      <%= link_to 'Edit', edit_project_path(project) %> |
+      <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:show, :index]
 
   # GET /projects
   # GET /projects.json
@@ -24,6 +25,7 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
+    
     @project = Project.new(project_params)
 
     respond_to do |format|
@@ -67,8 +69,14 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :summary, :tech, :comments, :image)
+      #Filter passed in url and append http onto the start of them if http isn't there
+      params['project']['url'].match(/\Ahttps?:\/\//) ? true : params['project']['url'] = "http://" + params['project']['url']
+      
+      if params['project']['code_url'].blank? != true
+        params['project']['code_url'].match(/\Ahttps?:\/\//) ? true : params['project']['code_url'] = "http://" + params['project']['code_url']
+      end
+      #White list
+      params.require(:project).permit(:title, :summary, :tech, :comments, :image, :url, :code_url)
     end
 end
