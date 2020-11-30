@@ -22,8 +22,6 @@ gem 'devise'
 # Use Bootsrap 4 library for Ui/Ux design
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-# Use octicons as a source for icons for Ui/Ux
-gem 'octicons_helper'
 # Use font awesome for icons
 gem 'font-awesome-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
