@@ -24,6 +24,8 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 # Use octicons as a source for icons for Ui/Ux
 gem 'octicons_helper'
+# Use font awesome for icons
+gem 'font-awesome-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.7'
 # Use postgresql as the database for Active Record
@@ -60,6 +62,8 @@ group :development, :test do
   gem 'mini_racer'
   gem 'rspec-rails', '~> 3.8'
   gem 'guard-rspec', require: false
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :development do
