@@ -10,7 +10,7 @@ end
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 # Use Carrier wave for image processing
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem "mini_magick"
 gem 'rmagick'
 # Use google-fog to store images for production
